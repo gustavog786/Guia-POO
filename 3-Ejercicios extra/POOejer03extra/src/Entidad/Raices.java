@@ -109,7 +109,5 @@ public class Raices {
         }else{
             System.out.println("No existe solucion");
         }
-    }
-            
-            
+    }                        
 }

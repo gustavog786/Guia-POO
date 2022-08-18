@@ -29,7 +29,7 @@ public class POOejer03extra {
    
     public static void main(String[] args) {
         // TODO code application logic here
-        Raices r1 = new Raices(20,0,1);
+        Raices r1 = new Raices(1,2,1);
         System.out.println("El discriminante es : "+ r1.getDiscriminante());
         System.out.println("Tiene 2 soluciones ? "+ r1.tieneRaices(r1));
         System.out.println("Tiene 1 unica solucion ? "+ r1.tieneRaiz(r1));

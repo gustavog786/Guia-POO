@@ -1,0 +1,74 @@
+/*
+Crea una clase en Java donde declares una variable de tipo array de Strings que contenga
+los doce meses del año, en minúsculas. A continuación, declara una variable mesSecreto
+de tipo String, y hazla igual a un elemento del array (por ejemplo, mesSecreto = mes[9]. El
+programa debe pedir al usuario que adivine el mes secreto. Si el usuario acierta mostrar
+un mensaje, y si no lo hace, pedir que vuelva a intentar adivinar el mes secreto. Un
+ejemplo de ejecución del programa podría ser este:
+Adivine el mes secreto. Introduzca el nombre del mes en minúsculas: febrero
+No ha acertado. Intente adivinarlo introduciendo otro mes: agosto
+¡Ha acertado!
+*/
+package Entidad;
+
+import java.util.Scanner;
+
+
+public class Mes {
+    Scanner leer = new Scanner(System.in).useDelimiter("\n");
+    String M1[] = new String[12];
+    String mesSecreto;
+
+    public Mes() {
+    }
+
+    public Mes(String mesSecreto) {
+        this.mesSecreto = mesSecreto;
+    }
+
+    public String[] getM1() {
+        return M1;
+    }
+
+    public void setM1(String[] M1) {
+        this.M1 = M1;
+    }
+
+    public String getMesSecreto() {
+        return mesSecreto;
+    }
+
+    public void setMesSecreto(String mesSecreto) {
+        this.mesSecreto = mesSecreto;
+    }
+    
+    
+    public void meses( String M1[]){
+  
+       M1[0] = "enero";
+       M1[1] = "febrero";
+       M1[2] = "marzo";
+       M1[3] = "Abril";
+       M1[4] = "mayo";
+       M1[5] = "junio";
+       M1[6] = "julio";
+       M1[7] = "agosto";
+       M1[8] = "septiembre";
+       M1[9] = "octubre";
+       M1[10] = "noviembre";
+       M1[11] = "diciembre";
+   }
+    public void secreto(String M1[]){
+       String se; 
+       String adivine ="" ;
+       se = M1[(int) (Math.random() * 12)];
+        do {
+            System.out.println("Adivine el mes secreto escrito en minusculas: ");
+            adivine = leer.next();
+            
+        } while (!adivine.equals(se));
+        System.out.println("Adivinaste..!!!!!");
+       
+       
+    }
+}
